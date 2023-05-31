@@ -20,13 +20,17 @@ def main():
         ],
         'movies': [
             # TODO: Change this to a movie you like
-            'movie' : 'FastX'
+            
             {
-                'title': 'The empire strikes back',
+                'title': 'Iron Man',
                 'genre': 'sci-fi'
             },
             # TODO: Add one more movie
-            'movies' : 'Mission_Impossible'
+            {
+                'title' : 'Mission Impossible',
+                'genre' : 'action'
+            },
+            
         ]
     }
 
@@ -38,12 +42,12 @@ def main():
 
     # Step 5: Add pizza toppings to the data structure
     # TODO: Change to pizza toppings you like
-    add_pizza_toppings(about_me, ['soylent green', 'racht'])
+    add_pizza_toppings(about_me, ['hot pepper', 'pickle'])
     print_pizza_toppings(about_me)
 
     # Step 6: Add another movie to the data structure
     # TODO: Change to a movie you like
-    add_movie(about_me, 'the lord of the rings', 'fantasy')
+    add_movie(about_me, 'The Golden Circus', 'action')
 
     # Step 7: Print a comma-separated list of movie genres
     print_movie_genres(about_me)
@@ -59,9 +63,9 @@ def print_student_name_and_id(my_info):
     """
     # TODO: Complete function body per Step 3
     # Print sentence containing name
-    print(f'My name is {['full_name']}')
+    print(f"My name is {my_info['full_name']}")
     # Print sentence containing student ID
-    print (f'My student ID is {['student_id']}')
+    print (f"My student ID is {my_info['student_id']}")
     print()
 
 def print_pizza_toppings(my_info):
@@ -74,8 +78,8 @@ def print_pizza_toppings(my_info):
     # Print header "My favourite pizza toppings are:"
     print(f' \n My favourite pizza toppings are: ')
     # Print bullet list of favourite pizza toppings
-    for pizza_topping in pizza['toppings']:
-    print(f'- {pizza_topping}')
+    for pizza_topping in my_info['toppings']:
+        print(f"- {pizza_topping}")
 
 def add_pizza_toppings(my_info, toppings):
     """Adds some pizza toppings to the list of favourites
@@ -86,11 +90,11 @@ def add_pizza_toppings(my_info, toppings):
     """
     # TODO: Complete function body per Step 5
     # Append new pizza toppings to end of list 
-    pizza['pizza_topping'].extend(new_pizza_topping)
+    my_info['pizza_topping'].extend(add_pizza_toppings)
     # Convert all pizza toppings to lowercase
-    pizza['pizza_topping'].lower()
+    my_info['pizza_topping'].lower()
     # Sort toppings list alphabetically
-    pizza['pizza_topping'].sort()
+    my_info['pizza_topping'].sort()
     return
 
 def add_movie(my_info, title, genre):
