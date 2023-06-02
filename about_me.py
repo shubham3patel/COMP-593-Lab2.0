@@ -78,8 +78,8 @@ def print_pizza_toppings(my_info):
     # Print header "My favourite pizza toppings are:"
     print(f' \n My favourite pizza toppings are: ')
     # Print bullet list of favourite pizza toppings
-    for pizza_topping in my_info['toppings']:
-        print(f"- {pizza_topping}")
+    for fav_pizza_topping in my_info['pizza_topping']:
+        print(f"- {fav_pizza_topping}")
 
 def add_pizza_toppings(my_info, toppings):
     """Adds some pizza toppings to the list of favourites
@@ -90,11 +90,11 @@ def add_pizza_toppings(my_info, toppings):
     """
     # TODO: Complete function body per Step 5
     # Append new pizza toppings to end of list 
-    my_info['pizza_topping'].extend(add_pizza_toppings)
+    my_info['pizza_topping'].extend(toppings)
     # Convert all pizza toppings to lowercase
     my_info['pizza_topping'].lower()
     # Sort toppings list alphabetically
-    my_info['pizza_topping'].sort()
+    my_info['pizza_topping'].sorted()
     return
 
 def add_movie(my_info, title, genre):
@@ -107,7 +107,14 @@ def add_movie(my_info, title, genre):
     """
     # TODO: Complete function body per Step 6
     # Create dictionary for new movie and add to movie list
-    return
+    new_movie = {
+        'title' : title,
+        'genre' : genre
+
+    }
+    my_info['movies'].append(new_movie)
+
+    return new_movie
 
 def print_movie_genres(my_info):
     """Prints a sentence listing all favourite movie genres
@@ -116,7 +123,7 @@ def print_movie_genres(my_info):
         my_info (dict): Data structure containing information about me
     """
     # TODO: Complete function body per Step 7
-    print()
+    print(f"My favorite movies are:", end = ' ' )
 
 def print_movie_titles(movie_list):
     """Prints a sentence listing all favourite movie titles
